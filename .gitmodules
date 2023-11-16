@@ -1,0 +1,3 @@
+[submodule "template/OxThesis"]
+	path = template/OxThesis
+	url = https://github.com/mcmanigle/OxThesis.git
