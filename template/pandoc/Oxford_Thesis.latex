@@ -63,7 +63,7 @@
 \renewcommand*{\bibfont}{\raggedright\small}
 
 % Change this to the name of your .bib file (usually exported from a citation manager like Zotero or EndNote).
-\addbibresource{references.bib}
+\addbibresource{ref/ref.bib}
 
 
 % Uncomment this if you want equation numbers per section (2.3.12), instead of per chapter (2.18):
@@ -73,9 +73,9 @@
 
 %%%%% THESIS / TITLE PAGE INFORMATION
 % Everybody needs to complete the following:
-\title{Suitably impressive thesis title}
-\author{Your Name}
-\college{Your College}
+\title{$title$}
+\author{$author$}
+\college{$institute$}
 
 % Master's candidates who require the alternate title page (with candidate number and word count)
 % must also un-comment and complete the following three lines:
@@ -86,9 +86,9 @@
 % Uncomment the following line if your degree also includes exams (eg most masters):
 %\renewcommand{\submittedtext}{Submitted in partial completion of the}
 % Your full degree name.  (But remember that DPhils aren't "in" anything.  They're just DPhils.)
-\degree{Doctor of Philosophy}
+\degree{$degree$}
 % Term and year of submission, or date if your board requires (eg most masters)
-\degreedate{Michaelmas 2014}
+\degreedate{$year$}
 
 
 %%%%% YOUR OWN PERSONAL MACROS
@@ -99,6 +99,8 @@
 	\newcommand{\nd}{\textsuperscript{nd}}
 	\renewcommand{\st}{\textsuperscript{st}}
 	\newcommand{\rd}{\textsuperscript{rd}}
+
+$author-includes$
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
@@ -134,7 +136,7 @@
 % This is used to create the separate, one-page abstract that you are required to hand into the Exam
 % Schools.  You can comment it out to generate a PDF for printing or whatnot.
 \begin{abstractseparate}
-	\input{text/abstract} % Create an abstract.tex file in the 'text' folder for your abstract.
+	$abstract$
 \end{abstractseparate}
 
 
@@ -154,12 +156,12 @@
 
 %%%%% ACKNOWLEDGEMENTS -- Nothing to do here except comment out if you don't want it.
 \begin{acknowledgements}
- 	\input{text/acknowledgements}
+ 	$acknowledgements$
 \end{acknowledgements}
 
 %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
 \begin{abstract}
-	\input{text/abstract}
+	$abstract$
 \end{abstract}
 
 %%%%% MINI TABLES
@@ -188,7 +190,7 @@
 % This example includes a list of abbreviations.  Look at text/abbreviations.tex to see how that file is
 % formatted.  The template can handle any kind of list though, so this might be a good place for a
 % glossary, etc.
-\include{text/abbreviations}
+% \include{text/abbreviations}
 
 % The Roman pages, like the Roman Empire, must come to its inevitable close.
 \end{romanpages}
@@ -197,30 +199,32 @@
 %%%%% CHAPTERS
 % Add or remove any chapters you'd like here, by file name (excluding '.tex'):
 \flushbottom
-\include{text/ch1-intro}
-\include{text/ch2-litreview}
+
+$body$
+% \include{text/ch1-intro}
+% \include{text/ch2-litreview}
 
 
 %% APPENDICES %% 
 % Starts lettered appendices, adds a heading in table of contents, and adds a
 %    page that just says "Appendices" to signal the end of your main text.
-\startappendices
-% Add or remove any appendices you'd like here:
-\include{text/appendix-1}
+% \startappendices
+% % Add or remove any appendices you'd like here:
+% \include{text/appendix-1}
 
 
-%%%%% REFERENCES
+% %%%%% REFERENCES
 
-% JEM: Quote for the top of references (just like a chapter quote if you're using them).  Comment to skip.
-\begin{savequote}[8cm]
-The first kind of intellectual and artistic personality belongs to the hedgehogs, the second to the foxes \dots
-  \qauthor{--- Sir Isaiah Berlin \cite{berlin_hedgehog_2013}}
-\end{savequote}
+% % JEM: Quote for the top of references (just like a chapter quote if you're using them).  Comment to skip.
+% \begin{savequote}[8cm]
+% The first kind of intellectual and artistic personality belongs to the hedgehogs, the second to the foxes \dots
+%   \qauthor{--- Sir Isaiah Berlin \cite{berlin_hedgehog_2013}}
+% \end{savequote}
 
-\setlength{\baselineskip}{0pt} % JEM: Single-space References
+% \setlength{\baselineskip}{0pt} % JEM: Single-space References
 
-{\renewcommand*\MakeUppercase[1]{#1}%
-\printbibliography[heading=bibintoc,title={\bibtitle}]}
+% {\renewcommand*\MakeUppercase[1]{#1}%
+% \printbibliography[heading=bibintoc,title={\bibtitle}]}
 
 
 \end{document}
