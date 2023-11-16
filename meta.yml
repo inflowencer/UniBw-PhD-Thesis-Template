@@ -1,7 +1,7 @@
 ---
 title: Suitable Impressive Thesis Title
 author: Maximilian Maigler
-institute: Universität der Bundeswehr München
+institute: Institut für Physik and Plasma Technologie
 degree: Dr.-Ing.
 author-includes: |
   \renewcommand{\vec}[1]{\mathbf{#1}}
@@ -16,7 +16,7 @@ author-includes: |
   }
 abstract: |
   Your abstract text goes here.  Check your departmental regulations, but generally this should be less than 300 words.
-  See the beginning of Chapter~\ref{ch:2-litreview} for more.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  See the beginning of Chapter \ref{ch:2-litreview} for more. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Pellentesque sit amet nibh volutpat, scelerisque nibh a, vehicula neque. Integer placerat nulla massa, et vestibulum
   velit dignissim id. Ut eget nisi elementum, consectetur nibh in, condimentum velit. Quisque sodales dui ut tempus
   mattis. Duis malesuada arcu at ligula egestas egestas. Phasellus interdum odio at sapien fringilla scelerisque. Mauris

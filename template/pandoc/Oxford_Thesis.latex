@@ -102,6 +102,15 @@
 
 $author-includes$
 
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\usepackage{microtype}
+\usepackage{lipsum}
+
+\defaultfontfeatures{Scale=MatchLowercase}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{Asana Math}
+
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
 

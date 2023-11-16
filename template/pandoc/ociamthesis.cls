@@ -72,7 +72,7 @@
 % CRESTS
 %
 
-\def\crest{{\includegraphics{fig/beltcrest.pdf}}}
+\def\crest{{\includegraphics{fig/unibw.pdf}}}
 
 
 %
@@ -225,7 +225,7 @@
 {\large \vspace*{1ex}
     {{\@college} \par}
 \vspace*{1ex}
-    {University of Oxford \par}
+    {Universität der Bundeswehr München \par}
 \vspace*{20mm}
     {{\submittedtext} \par}
 \vspace*{1ex}
@@ -296,7 +296,7 @@
     {Thesis word count: {\@wordcount} \par}
 \else
     {{\@college} \par}
-    {University of Oxford \par}
+    {Universität der Bundeswehr München \par}
 \fi
 \vspace*{1ex}
     {{\it \submittedtext} \par}

@@ -7,7 +7,7 @@ export TEMPLATE_DIR          ?= ./template/pandoc
 
 # Compilation options
 export PANDOC_COMMON_OPTS      = ${PANDOC_OPTIONS} --verbose -F pandoc-include -F pandoc-crossref --citeproc --bibliography ref/ref.bib --metadata-file meta.yml
-export PANDOC_MDPI_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --natbib --pdf-engine latexmk --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
+export PANDOC_MDPI_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine latexmk --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
 
 clear-cache:
 > echo "Cleaning ${BUILD_DIR} from cached values"
@@ -25,7 +25,7 @@ pre: clean
 compile:
 > pandoc ${PANDOC_MDPI_LATEX_OPTS} -s -t latex -o main.tex main.md
 > echo "Generating PDF"
-> latexmk -pdf main.tex
+> latexmk -pdf -pdflatex=xelatex main.tex 
 
 post:
 > mv main.tex main.pdf ${BUILD_DIR}/.
