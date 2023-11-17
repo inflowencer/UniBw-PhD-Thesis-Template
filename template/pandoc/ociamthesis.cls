@@ -47,6 +47,8 @@
    \rule[5mm]{7mm}{1pt}\hspace{1em}%
    \begin{varwidth}{\textwidth}I hereby certify that this is entirely\\my own work unless otherwise stated.\end{varwidth}}
 
+\usepackage{changepage}% or chngpage -- note that the syntax differs slightly between the two packages
+
 %
 % DECLARATIONS
 %
@@ -218,14 +220,17 @@
     {\@degreedate}}
   \end{center}
 \else
+\topskip0pt
+\vspace*{\fill}
+\begin{adjustwidth*}{}{5mm}% leave left margin alone, decrease right margin by 1in
   \begin{center}
     { \LARGE {\bfseries {\@title}} \par}
 {\large \vspace*{30mm} {\crest \par} \vspace*{25mm}}
     {{\Large \@author} \par}
 {\large \vspace*{1ex}
     {{\@college} \par}
-\vspace*{1ex}
-    {Universität der Bundeswehr München \par}
+% \vspace*{1ex}
+%     {Universität der Bundeswehr München \par}
 \vspace*{20mm}
     {{\submittedtext} \par}
 \vspace*{1ex}
@@ -233,9 +238,12 @@
 \vspace*{2ex}
     {\@degreedate}}
   \end{center}
+\end{adjustwidth*}
+\vspace*{\fill}
 \fi
   \vfill\null
-\end{alwayssingle}}
+\end{alwayssingle}
+}
 
 
 
@@ -259,7 +267,7 @@
 % on its own page.
 
 \newenvironment{acknowledgements}%
-{   \begin{alwayssingle}\chapter*{Acknowledgements}
+{   \begin{alwayssingle}\chapter*{\centerline{Acknowledgements}}
     \thispagestyle{empty}
 	\pagestyle{empty}
 	\setlength{\baselineskip}{\frontmatterbaselineskip}
@@ -274,7 +282,7 @@
 %i.e. tabbed in at both sides, and on its own page.
 
 \renewenvironment{abstract}%
-{   \begin{alwayssingle}\chapter*{Abstract}
+{   \begin{alwayssingle}\chapter*{\centerline{Abstract}}
     \thispagestyle{empty}
     \pagestyle{empty}
    \setlength{\baselineskip}{\frontmatterbaselineskip}}
@@ -379,7 +387,7 @@
 	% Used for inserting the Bibliography, List of Figures, indices, etc into the table of contents.
 
 % JEM: Allow flexible spacing after figures, to reduce other stretching
-\setlength{\textfloatsep}{20pt plus15pt minus4pt}
+\setlength{\textfloatsep}{14pt plus6pt minus6pt}
 
 % JEM: Fix paragraph spacing within quotes for multi-par quotes
 \renewenvironment{savequote}[1][10cm]{%
