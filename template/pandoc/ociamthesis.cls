@@ -47,7 +47,10 @@
    \rule[5mm]{7mm}{1pt}\hspace{1em}%
    \begin{varwidth}{\textwidth}I hereby certify that this is entirely\\my own work unless otherwise stated.\end{varwidth}}
 
+%% Custom definitions %%
 \usepackage{changepage}% or chngpage -- note that the syntax differs slightly between the two packages
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
 %
 % DECLARATIONS
@@ -74,7 +77,7 @@
 % CRESTS
 %
 
-\def\crest{{\includegraphics{fig/unibw.pdf}}}
+\def\crest{{\includegraphics{fig/logo/unibw.pdf}}}
 
 
 %
