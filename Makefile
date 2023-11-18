@@ -2,7 +2,7 @@
 
 # Directory variables
 export BUILD_DIR             ?= ./build
-export TEMPLATE_DIR          ?= ./template/pandoc
+# export TEMPLATE_DIR          ?= ./template/pandoc
 
 
 # Compilation options
@@ -13,14 +13,13 @@ clear-cache:
 > echo "Cleaning ${BUILD_DIR} from cached values"
 > rm -R -f ${BUILD_DIR}/*
 
-clean:
-> echo "Cleaning dir"
-> rm -f *.out *.log *.bbl *.fls *.blg *.fdb* *.aux *.tex *.latex *.mt* *.cls *.py *.bcf *.toc *.lof *.maf *.xml text/*.aux
+# clean:
+# > echo "Cleaning dir"
+# > rm -f *.out *.log *.bbl *.fls *.blg *.fdb* *.aux *.tex *.latex *.mt* *.cls *.py *.bcf *.toc *.lof *.maf *.xml text/*.aux
 
-pre: clean
-> echo "Creating directory ${BUILD_DIR}"
-> mkdir -p ${BUILD_DIR} Definitions
-> cp -rf ${TEMPLATE_DIR}/* .
+# pre: clean
+# > echo "Creating directory ${BUILD_DIR}"
+# > cp -rf ${TEMPLATE_DIR}/* .
 
 compile:
 > pandoc ${PANDOC_MDPI_LATEX_OPTS} -s -t latex -o main.tex main.md
@@ -38,4 +37,4 @@ scale:
 > gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=build/draft.pdf build/body.pdf
 > rm -f build/body.pdf
 
-all: pre compile post scale
+all: clear-cache compile post scale

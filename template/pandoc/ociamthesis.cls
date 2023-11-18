@@ -52,6 +52,19 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+% SI Units
+\usepackage{siunitx}
+\sisetup{
+detect-weight=true,
+detect-family=true,
+range-phrase={-},
+exponent-product={\cdot},
+range-units=single,
+detect-all=true
+}
+
 %
 % DECLARATIONS
 %
