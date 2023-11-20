@@ -12,6 +12,7 @@ export PANDOC_MDPI_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine l
 clear-cache:
 > echo "Cleaning ${BUILD_DIR} from cached values"
 > rm -R -f ${BUILD_DIR}/*
+> mkdir -p ${BUILD_DIR}
 
 # clean:
 # > echo "Cleaning dir"
@@ -27,6 +28,7 @@ compile:
 > latexmk -pdf -pdflatex=xelatex main.tex 
 
 post:
+> mkdir -p ${BUILD_DIR}
 > mv main.tex main.pdf ${BUILD_DIR}/.
 > mv ${BUILD_DIR}/main.pdf ${BUILD_DIR}/body.pdf
 > rm -f *.out *.log *.bbl *.fls *.blg *.fdb* *.aux *.tex *.bst *.pdf *.cls *.xml *.mt* *.bcf *.lof *.maf *.toc text/*.aux
