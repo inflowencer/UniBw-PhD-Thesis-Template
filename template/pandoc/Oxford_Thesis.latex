@@ -107,7 +107,7 @@ $author-includes$
 \usepackage{microtype}
 \usepackage{lipsum}
 
-\defaultfontfeatures{Scale=MatchLowercase}
+% \defaultfontfeatures{Scale=MatchLowercase}
 \setmainfont{TeX Gyre Pagella}
 \setmathfont{Asana Math}
 
