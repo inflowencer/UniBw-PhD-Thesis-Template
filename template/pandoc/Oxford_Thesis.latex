@@ -93,23 +93,26 @@
 
 %%%%% YOUR OWN PERSONAL MACROS
 % This is a good place to dump your own LaTeX macros as they come up.
+\newcommand{\be}[1]{\textsubscript{#1}}  % easier textsubscripts
+\newcommand{\ab}[1]{\textsubscript{#1}}  % easier textsubscripts
 
-% To make text superscripts shortcuts
-	\renewcommand{\th}{\textsuperscript{th}} % ex: I won 4\th place
-	\newcommand{\nd}{\textsuperscript{nd}}
-	\renewcommand{\st}{\textsuperscript{st}}
-	\newcommand{\rd}{\textsuperscript{rd}}
+% Super-/subscript shortcuts
+\renewcommand{\th}{\textsuperscript{th}} % ex: I won 4\th place
+\newcommand{\nd}{\textsuperscript{nd}}
+\renewcommand{\st}{\textsuperscript{st}}
+\newcommand{\rd}{\textsuperscript{rd}}
 
 $author-includes$
 
 \usepackage{amsmath}
 \usepackage{unicode-math}
+\setmathfont{Asana-Math.otf}
 \usepackage{microtype}
 \usepackage{lipsum}
 
-% \defaultfontfeatures{Scale=MatchLowercase}
+\defaultfontfeatures{Ligatures=TeX}
 \setmainfont{TeX Gyre Pagella}
-\setmathfont{Asana Math}
+% \setmathfont{Asana Math}
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}

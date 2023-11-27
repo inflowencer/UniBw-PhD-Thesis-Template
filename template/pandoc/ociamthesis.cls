@@ -62,7 +62,7 @@ detect-family=true,
 range-phrase={-},
 exponent-product={\cdot},
 range-units=single,
-detect-all=true
+detect-all=true,
 }
 
 %
