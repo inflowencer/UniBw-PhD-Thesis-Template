@@ -57,12 +57,16 @@
 % SI Units
 \usepackage{siunitx}
 \sisetup{
+detect-mode,
 detect-weight=true,
 detect-family=true,
-range-phrase={-},
+range-phrase={--},
 exponent-product={\cdot},
 range-units=single,
-detect-all=true
+detect-all=true,
+number-math-rm=\ensuremath,
+math-micro=\text{µ},
+text-micro=µ
 }
 
 %
