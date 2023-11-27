@@ -64,9 +64,6 @@ range-phrase={--},
 exponent-product={\cdot},
 range-units=single,
 detect-all=true,
-number-math-rm=\ensuremath,
-math-micro=\text{µ},
-text-micro=µ
 }
 
 %
