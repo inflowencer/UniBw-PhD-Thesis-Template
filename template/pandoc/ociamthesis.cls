@@ -141,7 +141,11 @@ detect-all=true,
 \usepackage{longtable} 
 	% Allows tables to span multiple pages (this package must be called before hyperref)
 
-\usepackage[font=small,labelfont=bf]{caption} 
+\usepackage[
+    font=small,
+    labelfont=bf,
+    width=0.85\textwidth
+]{caption} 
 	% Nicer captions
 
 \usepackage{multicol,multirow,array} 
@@ -184,7 +188,7 @@ detect-all=true,
 	% To format the bibliography	
 
 
-\usepackage[colorlinks=false,pdfpagelabels]{hyperref} 
+\usepackage[pdfpagelabels, colorlinks=true, citecolor=blue, urlcolor=black, linkcolor=cyan]{hyperref} 
 \usepackage{bookmark}
 	% for linking between references, figures, TOC, etc in the pdf document
 
