@@ -60,7 +60,8 @@
 %\newcommand*{\bibtitle}{Works Cited}
 
 % This makes the bibliography left-aligned (not 'justified') and slightly smaller font.
-\renewcommand*{\bibfont}{\raggedright\small}
+\renewcommand*{\bibfont}{\small}
+% \renewcommand*{\bibfont}{\raggedright\small}
 
 % Change this to the name of your .bib file (usually exported from a citation manager like Zotero or EndNote).
 \addbibresource{ref/ref.bib}
@@ -105,21 +106,13 @@
 $author-includes$
 
 \usepackage{amsmath}
-\usepackage{unicode-math}
+\usepackage[mathit=sym,bold-style=ISO]{unicode-math}
 \setmathfont{Asana-Math.otf}
 \usepackage{microtype}
 \usepackage{fontspec}
-% \usepackage{unicode-math}
-\usepackage{lipsum}
-\setmainfont{TeX Gyre Pagella}
-% \setmathfont{Asana Math}
-\usepackage[mathit=sym,bold-style=ISO]{unicode-math}
-\setmathfont{Asana Math}[Scale=MatchLowercase]
-% \usepackage{fontspec}
-
 \defaultfontfeatures{Ligatures=TeX}
 \setmainfont{TeX Gyre Pagella}
-% \setmathfont{Asana Math}
+
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}

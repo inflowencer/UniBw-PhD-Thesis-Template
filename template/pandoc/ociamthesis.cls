@@ -185,6 +185,7 @@ detect-all=true,
 
 
 \usepackage[colorlinks=false,pdfpagelabels]{hyperref} 
+\usepackage{bookmark}
 	% for linking between references, figures, TOC, etc in the pdf document
 
 \usepackage[nohints,tight]{minitoc} 

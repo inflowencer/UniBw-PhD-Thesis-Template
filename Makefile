@@ -1,42 +1,47 @@
 .RECIPEPREFIX = >
 
 # Directory variables
-export BUILD_DIR             ?= ./build
-# export TEMPLATE_DIR          ?= ./template/pandoc
+export BUILD_DIR   ?= build
+export EXPORT_DIR  ?= export
+export BIB_PATH    ?= ref/ref.bib
 
 
 # Compilation options
-export PANDOC_COMMON_OPTS      = ${PANDOC_OPTIONS} --verbose -F pandoc-include -F pandoc-crossref --citeproc --bibliography ref/ref.bib --metadata-file meta.yml
-export PANDOC_MDPI_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine latexmk --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
+export PANDOC_COMMON_OPTS = ${PANDOC_OPTIONS} --verbose -F pandoc-include -F pandoc-crossref --citeproc --bibliography ref/ref.bib --metadata-file meta.yml
+export PANDOC_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine xelatex --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
 
-clear-cache:
-> echo "Cleaning ${BUILD_DIR} from cached values"
-> rm -R -f ${BUILD_DIR}/*
-> mkdir -p ${BUILD_DIR}
+dirs:
+> mkdir -p ${BUILD_DIR} ${EXPORT_DIR}
 
-# clean:
-# > echo "Cleaning dir"
-# > rm -f *.out *.log *.bbl *.fls *.blg *.fdb* *.aux *.tex *.latex *.mt* *.cls *.py *.bcf *.toc *.lof *.maf *.xml text/*.aux
+# clear-build:
+# > echo "Cleaning ${BUILD_DIR} from cached values"
+# > rm -R -f ${BUILD_DIR}/*
+# > mkdir -p ${BUILD_DIR}
 
-# pre: clean
-# > echo "Creating directory ${BUILD_DIR}"
-# > cp -rf ${TEMPLATE_DIR}/* .
+pandoc:
+> echo -e "     -----    Running 'pandoc'    ------     "
+> sleep 1
+> pandoc ${PANDOC_LATEX_OPTS} -s -t latex -o main.tex main.md
+> mv main.tex *.cls *.latex *.py ${BUILD_DIR}/.
+> mkdir -p ${BUILD_DIR}/ref ${BUILD_DIR}/custom
+> \cp -fR ${BIB_PATH} ${BUILD_DIR}/${BIB_PATH}
+> \cp -fR custom/author-includes.tex ${BUILD_DIR}/custom/author-includes.tex
+> \cp -fR fig ${BUILD_DIR}/fig
 
-compile:
-> pandoc ${PANDOC_MDPI_LATEX_OPTS} -s -t latex -o main.tex main.md
-> echo "Generating PDF"
-> latexmk -pdf -pdflatex=xelatex main.tex 
+latexmk:
+> echo -e "     -----    Building PDF using 'latexmk'    ------     "
+> sleep 1
+> latexmk -pdf -pdflatex=xelatex -cd ${BUILD_DIR}/main.tex
 
-post:
-> mkdir -p ${BUILD_DIR}
-> mv main.tex main.pdf ${BUILD_DIR}/.
-> mv ${BUILD_DIR}/main.pdf ${BUILD_DIR}/body.pdf
-> rm -f *.out *.log *.bbl *.fls *.blg *.fdb* *.aux *.tex *.bst *.pdf *.cls *.xml *.mt* *.bcf *.lof *.maf *.toc text/*.aux
-> rm -f *.latex *.py
 
 scale:
-> gs -sDEVICE=pdfwrite -dPDFSETTINGS=/printer -dNOPAUSE -dBATCH -sOutputFile=build/phd-thesis.pdf build/body.pdf
-> gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=build/draft.pdf build/body.pdf
-> rm -f build/body.pdf
+> gs -sDEVICE=pdfwrite -dPDFSETTINGS=/printer -dNOPAUSE -dBATCH -sOutputFile=${EXPORT_DIR}/body.pdf ${BUILD_DIR}/main.pdf
+> gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=${EXPORT_DIR}/draft.pdf ${EXPORT_DIR}/body.pdf
+# > rm -f build/body.pdf
 
-all: clear-cache compile post scale
+# post:
+# > mv $BUILD_DIR/main.tex $BUILD_DIRmain.pdf ${BUILD_DIR}/.
+# > mv ${BUILD_DIR}/main.pdf ${BUILD_DIR}/body.pdf
+
+# all: clear-build references document post scale
+all: dirs pandoc latexmk scale
