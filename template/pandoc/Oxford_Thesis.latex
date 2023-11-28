@@ -41,7 +41,7 @@
 % This highlights (in blue) corrections marked with (for words) \mccorrect{blah} or (for whole
 % paragraphs) \begin{mccorrection} . . . \end{mccorrection}.  This can be useful for sending a PDF of
 % your corrected thesis to your examiners for review.  Turn it off, and the blue disappears.
-\correctionstrue
+\correctionstrue{}
 
 
 %%%%% BIBLIOGRAPHY SETUP
@@ -106,12 +106,17 @@
 $author-includes$
 
 \usepackage{amsmath}
-\usepackage[mathit=sym,bold-style=ISO]{unicode-math}
-\setmathfont{Asana-Math.otf}
+% \usepackage[mathit=sym,bold-style=ISO]{unicode-math}
+\usepackage{unicode-math}
+\setmainfont{TeX Gyre Pagella}
+\setmathfont{TeX Gyre Pagella Math}
+% \setmainfont{texgyrepagella-regular.otf}
+% \setmathfont{texgyrepagella-math.otf}
+% \setmathfont{Asana-Math.otf}
 \usepackage{microtype}
 \usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\setmainfont{TeX Gyre Pagella}
+% \defaultfontfeatures{Ligatures=TeX}
+% \setmainfont{TeX Gyre Pagella}
 
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE

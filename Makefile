@@ -20,7 +20,6 @@ dirs:
 
 pandoc:
 > echo -e "     -----    Running 'pandoc'    ------     "
-> sleep 1
 > pandoc ${PANDOC_LATEX_OPTS} -s -t latex -o main.tex main.md
 > mv main.tex *.cls *.latex *.py ${BUILD_DIR}/.
 > mkdir -p ${BUILD_DIR}/ref ${BUILD_DIR}/custom
@@ -30,7 +29,6 @@ pandoc:
 
 latexmk:
 > echo -e "     -----    Building PDF using 'latexmk'    ------     "
-> sleep 1
 > latexmk -pdf -pdflatex=xelatex -cd ${BUILD_DIR}/main.tex
 
 
