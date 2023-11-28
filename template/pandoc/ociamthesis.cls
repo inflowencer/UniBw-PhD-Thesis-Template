@@ -144,7 +144,7 @@ detect-all=true,
 \usepackage[
     font=small,
     labelfont=bf,
-    width=0.85\textwidth
+    width=0.9\textwidth
 ]{caption} 
 	% Nicer captions
 
