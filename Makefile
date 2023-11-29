@@ -23,7 +23,7 @@ pandoc:
 > cp -uR fig ${BUILD_DIR}/fig
 
 lualatex:
-> echo -e "     -----    Building PDF using 'latexmk'    ------     "
+> echo -e "     -----    Building PDF using 'lualatex'    ------     "
 > cd ${BUILD_DIR}; lualatex main.tex
 
 latexmk:
