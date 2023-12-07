@@ -64,6 +64,8 @@ range-phrase={--},
 exponent-product={\cdot},
 range-units=single,
 detect-all=true,
+math-micro=$\upmu$,
+text-micro=$\upmu$
 }
 
 %
@@ -136,6 +138,7 @@ detect-all=true,
 \usepackage{nicefrac}
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{upgreek}
 \usepackage{textcomp}
 
 \usepackage{longtable} 

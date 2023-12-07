@@ -16,7 +16,7 @@ dirs:
 pandoc:
 > echo -e "     -----    Running 'pandoc'    ------     "
 > pandoc ${PANDOC_LATEX_OPTS} -s -t latex -o main.tex main.md
-> mv main.tex *.cls *.latex *.py *.bst ${BUILD_DIR}/.
+> mv main.tex *.cls *.latex *.py ${BUILD_DIR}/.
 > mkdir -p ${BUILD_DIR}/ref ${BUILD_DIR}/custom
 > cp -uR ${BIB_PATH} ${BUILD_DIR}/${BIB_PATH}
 > cp -uR custom/author-includes.tex ${BUILD_DIR}/custom/author-includes.tex

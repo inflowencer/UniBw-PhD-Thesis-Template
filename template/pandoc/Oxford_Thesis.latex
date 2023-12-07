@@ -52,7 +52,19 @@
 % Either way, you'll have to choose and configure an appropriate bibliography format...
 
 % The science-type option: numerical in-text citation with references in order of appearance.
-\usepackage[style=ieee, sorting=none, backend=biber, doi=true, isbn=false]{biblatex}
+\usepackage[
+	style=ieee,
+	sortcites=true,
+	backend=biber,
+	doi=true,
+	isbn=false,
+	maxcitenames=2,
+	mincitenames=1,
+	uniquelist=true,
+	abbreviate,
+	autocite=superscript
+]{biblatex}
+
 \newcommand*{\bibtitle}{References}
 
 % The humanities-type option: author-year in-text citation with an alphabetical works cited.
@@ -105,18 +117,22 @@
 
 $author-includes$
 
-\usepackage{amsmath}
-% \usepackage[mathit=sym,bold-style=ISO]{unicode-math}
-\usepackage{unicode-math}
-\setmainfont{TeX Gyre Pagella}
-\setmathfont{TeX Gyre Pagella Math}
-% \setmainfont{texgyrepagella-regular.otf}
-% \setmathfont{texgyrepagella-math.otf}
-% \setmathfont{Asana-Math.otf}
-\usepackage{microtype}
+\usepackage{mathpazo}
 \usepackage{fontspec}
-% \defaultfontfeatures{Ligatures=TeX}
+\usepackage{microtype}
+
+\setmainfont{TeX Gyre Pagella}
+
+% % \usepackage[mathit=sym,bold-style=ISO]{unicode-math}
+% \usepackage{unicode-math}
 % \setmainfont{TeX Gyre Pagella}
+% \setmathfont{TeX Gyre Pagella Math}
+% % \setmainfont{texgyrepagella-regular.otf}
+% % \setmathfont{texgyrepagella-math.otf}
+% % \setmathfont{Asana-Math.otf}
+% \usepackage{fontspec}
+% % \defaultfontfeatures{Ligatures=TeX}
+% % \setmainfont{TeX Gyre Pagella}
 
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
