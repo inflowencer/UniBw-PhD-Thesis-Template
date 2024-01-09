@@ -53,7 +53,8 @@
 
 % The science-type option: numerical in-text citation with references in order of appearance.
 \usepackage[
-	style=ieee,
+	% style=ieee,
+	style=numeric,
 	sortcites=true,
 	backend=biber,
 	doi=true,
@@ -62,7 +63,7 @@
 	mincitenames=1,
 	uniquelist=true,
 	abbreviate,
-	autocite=superscript
+	% autocite=superscript
 ]{biblatex}
 
 \newcommand*{\bibtitle}{References}

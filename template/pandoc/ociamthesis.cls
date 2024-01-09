@@ -64,8 +64,8 @@ range-phrase={--},
 exponent-product={\cdot},
 range-units=single,
 detect-all=true,
-math-micro=$\upmu$,
-text-micro=$\upmu$
+% math-micro=$\upmu$,
+% text-micro=$\upmu$
 }
 
 %
