@@ -212,6 +212,8 @@ $author-includes$
 % This is where the whole-document ToC appears:
 \tableofcontents
 
+\printunsrtglossary[type=symbols,style=long4col]
+
 \listoffigures
 	\mtcaddchapter
 % \mtcaddchapter is needed when adding a non-chapter (but chapter-like) entity to avoid confusing minitoc

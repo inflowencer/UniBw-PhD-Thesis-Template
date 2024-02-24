@@ -4,11 +4,12 @@
 export BUILD_DIR   ?= build
 export EXPORT_DIR  ?= export
 export BIB_PATH    ?= ref/ref.bib
+export PDFENGINE   ?= lualatex
 
 
 # Compilation options
 export PANDOC_COMMON_OPTS = ${PANDOC_OPTIONS} --verbose -F pandoc-include -F pandoc-crossref --citeproc --bibliography ref/ref.bib --metadata-file meta.yml
-export PANDOC_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine lualatex --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
+export PANDOC_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine ${PDFENGINE} --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
 
 dirs:
 > mkdir -p ${BUILD_DIR} ${EXPORT_DIR}
@@ -19,16 +20,16 @@ pandoc:
 > mv main.tex *.cls *.latex *.py ${BUILD_DIR}/.
 > mkdir -p ${BUILD_DIR}/ref ${BUILD_DIR}/custom
 > cp -uR ${BIB_PATH} ${BUILD_DIR}/${BIB_PATH}
-> cp -uR custom/author-includes.tex ${BUILD_DIR}/custom/author-includes.tex
+> cp -uR custom ${BUILD_DIR}/.
 > cp -uR fig ${BUILD_DIR}/fig
 
-lualatex:
+latex:
 > echo -e "     -----    Building PDF using 'lualatex'    ------     "
-> cd ${BUILD_DIR}; lualatex main.tex
+> cd ${BUILD_DIR}; ${PDFENGINE} main.tex
 
 latexmk:
 > echo -e "     -----    Building PDF using 'latexmk'    ------     "
-> latexmk -pdf -pdflatex=lualatex -cd ${BUILD_DIR}/main.tex
+> latexmk -pdf -pdflatex=${PDFENGINE} -cd ${BUILD_DIR}/main.tex
 
 
 scale:
@@ -41,6 +42,6 @@ scale:
 # > mv ${BUILD_DIR}/main.pdf ${BUILD_DIR}/body.pdf
 
 # all: clear-build references document post scale
-doc: dirs pandoc lualatex scale
+doc: dirs pandoc latex scale
 
 all: dirs pandoc latexmk scale
