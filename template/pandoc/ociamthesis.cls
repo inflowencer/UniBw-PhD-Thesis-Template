@@ -64,6 +64,7 @@ range-phrase={--},
 exponent-product={\cdot},
 range-units=single,
 detect-all=true,
+separate-uncertainty = true,
 % math-micro=$\upmu$,
 % text-micro=$\upmu$
 }
