@@ -138,7 +138,8 @@ separate-uncertainty = true,
 \usepackage{microtype}
 \usepackage{nicefrac}
 \usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{unicode-math}
+% \usepackage{amssymb}
 \usepackage{upgreek}
 \usepackage{textcomp}
 

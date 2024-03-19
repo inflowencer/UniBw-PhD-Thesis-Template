@@ -118,23 +118,7 @@
 
 $author-includes$
 
-\usepackage{mathpazo}
-\usepackage{fontspec}
-\usepackage{microtype}
-
-\setmainfont{TeX Gyre Pagella}
-
-% % \usepackage[mathit=sym,bold-style=ISO]{unicode-math}
-% \usepackage{unicode-math}
-% \setmainfont{TeX Gyre Pagella}
-% \setmathfont{TeX Gyre Pagella Math}
-% % \setmainfont{texgyrepagella-regular.otf}
-% % \setmathfont{texgyrepagella-math.otf}
-% % \setmathfont{Asana-Math.otf}
-% \usepackage{fontspec}
-% % \defaultfontfeatures{Ligatures=TeX}
-% % \setmainfont{TeX Gyre Pagella}
-
+$font$
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
