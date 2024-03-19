@@ -1,6 +1,7 @@
 # Build related
 /test
 /build
+*log
 
 # From original template
 /template/OxThesis
