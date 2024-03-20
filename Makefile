@@ -31,7 +31,6 @@ latexmk:
 > echo -e "     -----    Building PDF using 'latexmk'    ------     "
 > latexmk -pdf -pdflatex=${PDFENGINE} -cd ${BUILD_DIR}/main.tex
 
-
 scale:
 > gs -sDEVICE=pdfwrite -dPDFSETTINGS=/printer -dNOPAUSE -dBATCH -sOutputFile=${EXPORT_DIR}/body.pdf ${BUILD_DIR}/main.pdf
 > gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=${EXPORT_DIR}/draft.pdf ${EXPORT_DIR}/body.pdf
