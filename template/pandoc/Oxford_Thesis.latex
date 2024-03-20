@@ -59,7 +59,7 @@
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-\newcommand{\er}[1]{Eq.~\eqref{eq:#1}}
+\newcommand{\er}[1]{eq.~\eqref{eq:#1}}
 
 \input{colors.tex}
 
@@ -72,12 +72,12 @@
 
 % The science-type option: numerical in-text citation with references in order of appearance.
 \usepackage[
-	% style=ieee,
-	style=numeric,
+	citestyle=numeric,
+	bibstyle=authoryear,
 	sortcites=true,
 	backend=biber,
 	doi=true,
-	isbn=false,
+	isbn=true,
 	maxcitenames=2,
 	mincitenames=1,
 	uniquelist=true,
