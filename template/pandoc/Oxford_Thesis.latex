@@ -44,15 +44,24 @@
 \correctionstrue{}
 
 % Standard packages and definitions
+\usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{booktabs}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{footnote}
+\usepackage{lipsum}  
+\usepackage[version=4]{mhchem}
+\usepackage{array}
+\usepackage{multirow}
 
 \captionsetup{format=hang}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcommand{\er}[1]{Eq.~\eqref{eq:#1}}
+
+\input{colors.tex}
 
 %%%%% BIBLIOGRAPHY SETUP
 % Note that your bibliography will require some tweaking depending on your department, preferred format, etc.
