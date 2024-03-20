@@ -145,8 +145,6 @@ $font$
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
 
-
-
 %%%%% CHOOSE YOUR LINE SPACING HERE
 % This is the official option.  Use it for your submission copy and library copy:
 \setlength{\textbaselineskip}{16pt plus2pt}
@@ -159,6 +157,11 @@ $font$
 % Leave this line alone; it gets things started for the real document.
 \setlength{\baselineskip}{\textbaselineskip}
 
+%%%%% Equation spacing
+\setlength{\abovedisplayskip}{0pt plus 2pt minus 1pt}
+\setlength{\abovedisplayshortskip}{0pt plus 2pt minus 1pt}
+\setlength{\belowdisplayskip}{14pt plus 2pt minus 1pt}
+\setlength{\belowdisplayshortskip}{14pt plus 2pt minus 1pt}
 
 %%%%% CHOOSE YOUR SECTION NUMBERING DEPTH HERE
 % You have two choices.  First, how far down are sections numbered?  (Below that, they're named but
