@@ -47,7 +47,6 @@
 \usepackage{graphicx}
 \usepackage{tabularx}
 \usepackage{booktabs}
-\usepackage{caption}
 \usepackage{subcaption}
 \usepackage{footnote}
 \usepackage{lipsum}  
@@ -60,7 +59,7 @@
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-\newcommand{\er}[1]{eq.~\eqref{eq:#1}}
+\newcommand{\er}[1]{Equation~\eqref{eq:#1}}
 
 % Equation spacings
 \abovedisplayskip=12pt plus 3pt minus 9pt
