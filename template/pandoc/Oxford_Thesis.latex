@@ -54,12 +54,12 @@
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{float}
+\usepackage{bold-extra}
 
 \captionsetup{format=hang}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-\newcommand{\er}[1]{Equation~\eqref{eq:#1}}
 
 % Equation spacings
 \abovedisplayskip=12pt plus 3pt minus 9pt
@@ -141,15 +141,16 @@
 
 %%%%% YOUR OWN PERSONAL MACROS
 % This is a good place to dump your own LaTeX macros as they come up.
+\newcommand{\er}[1]{Equation~\eqref{eq:#1}}
 \newcommand{\be}[1]{\textsubscript{#1}}  % easier textsubscripts
 \newcommand{\ab}[1]{\textsubscript{#1}}  % easier textsubscripts
-
-% Super-/subscript shortcuts
 \renewcommand{\th}{\textsuperscript{th}} % ex: I won 4\th place
 \newcommand{\nd}{\textsuperscript{nd}}
 \renewcommand{\st}{\textsuperscript{st}}
 \newcommand{\rd}{\textsuperscript{rd}}
 \newcommand{\vecc}[1]{\mathbf{#1}}
+\newcommand{\partialdifof}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\bt}[1]{\texttt{\textbf{#1}}}
 
 $if(author-includes)$
 \input{$author-includes$}
