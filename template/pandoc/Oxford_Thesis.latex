@@ -87,14 +87,17 @@
 	mincitenames=1,
 	uniquelist=true,
 	abbreviate,
-	maxbibnames=99
+	maxbibnames=99,
+	citestyle=numeric-comp, % Multiple citations delimited by ", "
 	% autocite=superscript
 ]{biblatex}
 
+% Bold authors
 \DeclareNameWrapperFormat{sortname}{\mkbibbold{#1}}
 \DeclareNameWrapperAlias{author}{sortname}
 \DeclareNameWrapperAlias{editor}{sortname}
 \DeclareNameWrapperAlias{translator}{sortname}
+% \renewcommand\citepunct{, } 
 
 % Change this to the name of your .bib file (usually exported from a citation manager like Zotero or EndNote).
 \addbibresource{ref/ref.bib}
