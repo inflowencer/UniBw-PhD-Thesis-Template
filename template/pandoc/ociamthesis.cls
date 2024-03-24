@@ -194,7 +194,13 @@ separate-uncertainty = true,
 	% To format the bibliography	
 
 
-\usepackage[pdfpagelabels, colorlinks=true, citecolor=blue, urlcolor=black, linkcolor=black]{hyperref} 
+\usepackage[
+    pdfpagelabels,
+    colorlinks=true,
+    citecolor=blue,
+    urlcolor=blue,
+    linkcolor=black
+]{hyperref} 
 \usepackage{bookmark}
 	% for linking between references, figures, TOC, etc in the pdf document
 
