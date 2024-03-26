@@ -224,9 +224,9 @@ $endif$
 \begin{abstract}
 	$if(abstract-german)$
 	$abstract-german$
+	\\~\\~\\
 	$endif$
 	$if(abstract)$
-	\\~\\~\\
 	$abstract$
 	$endif$
 \end{abstract}
