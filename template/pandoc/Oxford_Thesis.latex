@@ -55,6 +55,7 @@
 \usepackage{multirow}
 \usepackage{float}
 \usepackage{bold-extra}
+\usepackage{abstract}
 
 \captionsetup{format=hang}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
@@ -220,16 +221,26 @@ $endif$
  	$acknowledgements$
 \end{acknowledgements}
 
+
 %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
+$if(abstract-german)$
+\renewcommand{\abstractname}{Kurzfassung}
 \begin{abstract}
-	$if(abstract-german)$
 	$abstract-german$
-	\\~\\~\\
-	$endif$
+\end{abstract}
+\pagebreak
+\renewcommand{\abstractname}{Abstract}
+\begin{abstract}
+    $abstract$
+\end{abstract}
+$else$
+\begin{abstract}
 	$if(abstract)$
 	$abstract$
 	$endif$
 \end{abstract}
+$endif$
+
 
 %%%%% MINI TABLES
 % This lays the groundwork for per-chapter, mini tables of contents.  Comment the following line

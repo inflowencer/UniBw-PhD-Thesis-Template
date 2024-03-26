@@ -309,6 +309,8 @@ separate-uncertainty = true,
 	\setlength{\baselineskip}{\frontmatterbaselineskip}
 }
 {\end{alwayssingle}}
+% \newenvironment{acknowledgements}{\thispagestyle{empty}}\centerline{\textbf{Acknowledgements}}{}
+
 
 
 %ABSTRACT
@@ -316,13 +318,12 @@ separate-uncertainty = true,
 %The abstract environment puts a large, bold, centered "Abstract" label at
 %the top of the page. The abstract itself appears in a quote environment,
 %i.e. tabbed in at both sides, and on its own page.
-
-\renewenvironment{abstract}%
-{   \begin{alwayssingle}\chapter*{\centerline{Abstract}}
-    \thispagestyle{empty}
-    \pagestyle{empty}
-   \setlength{\baselineskip}{\frontmatterbaselineskip}}
-{\end{alwayssingle}}
+% \renewenvironment{abstract}%
+% {   \begin{alwayssingle}\chapter*{\centerline{Abstract}}
+%     \thispagestyle{empty}
+%     \pagestyle{empty}
+%    \setlength{\baselineskip}{\frontmatterbaselineskip}}
+% {\end{alwayssingle}}
 
 %The abstractseparate environment is for running of a page with the abstract
 %on including title and author etc as required to be handed in separately
