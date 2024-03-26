@@ -194,9 +194,11 @@ $font$
 %%%%% ABSTRACT SEPARATE
 % This is used to create the separate, one-page abstract that you are required to hand into the Exam
 % Schools.  You can comment it out to generate a PDF for printing or whatnot.
+$if(abstract)$
 \begin{abstractseparate}
 	$abstract$
 \end{abstractseparate}
+$endif$
 
 
 % JEM: Pages are roman numbered from here, though page numbers are invisible until ToC.  This is in
@@ -220,7 +222,13 @@ $font$
 
 %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
 \begin{abstract}
+	$if(abstract-german)$
+	$abstract-german$
+	$endif$
+	$if(abstract)$
+	\\~\\~\\
 	$abstract$
+	$endif$
 \end{abstract}
 
 %%%%% MINI TABLES
