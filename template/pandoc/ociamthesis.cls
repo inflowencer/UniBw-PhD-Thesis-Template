@@ -201,6 +201,8 @@ separate-uncertainty = true,
     urlcolor=blue,
     linkcolor=black
 ]{hyperref} 
+\renewcommand\thefootnote{\textcolor{blue}{\arabic{footnote}}}
+
 \usepackage{bookmark}
 	% for linking between references, figures, TOC, etc in the pdf document
 
