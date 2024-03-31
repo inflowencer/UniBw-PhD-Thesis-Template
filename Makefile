@@ -5,10 +5,10 @@ export BUILD_DIR   ?= build
 export EXPORT_DIR  ?= export
 export BIB_PATH    ?= ref/ref.bib
 export PDFENGINE   ?= lualatex
-
+export META_FILE   ?= .meta.yml
 
 # Compilation options
-export PANDOC_COMMON_OPTS = ${PANDOC_OPTIONS} --verbose -F pandoc-include -F pandoc-crossref --citeproc --bibliography ref/ref.bib --metadata-file meta.yml
+export PANDOC_COMMON_OPTS = ${PANDOC_OPTIONS} --verbose -F pandoc-include -F pandoc-crossref --citeproc --bibliography ref/ref.bib --metadata-file ${META_FILE}
 export PANDOC_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine ${PDFENGINE} --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
 
 dirs:
@@ -22,6 +22,7 @@ pandoc:
 > cp -uR ${BIB_PATH} ${BUILD_DIR}/${BIB_PATH}
 > cp -uR fig ${BUILD_DIR}/fig
 > cp -uR custom ${BUILD_DIR}/.
+# > sed -i -e 's/\\phantomsection//g' main.tex
 
 latex:
 > echo -e "     -----    Building PDF using 'lualatex'    ------     "

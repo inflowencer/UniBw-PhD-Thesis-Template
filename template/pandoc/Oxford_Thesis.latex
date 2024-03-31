@@ -44,15 +44,11 @@
 \correctionstrue{}
 
 % Standard packages and definitions
-\usepackage{graphicx}
 \usepackage{tabularx}
-\usepackage{booktabs}
 \usepackage{subcaption}
 \usepackage{footnote}
 \usepackage{lipsum}  
 \usepackage[version=4]{mhchem}
-\usepackage{array}
-\usepackage{multirow}
 \usepackage{float}
 \usepackage{bold-extra}
 \usepackage{abstract}
@@ -61,12 +57,6 @@
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-
-% Equation spacings
-\abovedisplayskip=12pt plus 3pt minus 9pt
-\abovedisplayshortskip=0pt plus 3pt
-\belowdisplayskip=12pt plus 3pt minus 9pt
-\belowdisplayshortskip=7pt plus 3pt minus 4pt
 
 \input{colors.tex}
 
@@ -99,6 +89,15 @@
 \DeclareNameWrapperAlias{editor}{sortname}
 \DeclareNameWrapperAlias{translator}{sortname}
 % \renewcommand\citepunct{, } 
+
+% Equation spacing
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize%
+    \setlength\abovedisplayskip{0pt}%
+    \setlength\belowdisplayskip{14pt}%
+    \setlength\abovedisplayshortskip{-4pt}%
+    \setlength\belowdisplayshortskip{0pt}%
+}
 
 % Change this to the name of your .bib file (usually exported from a citation manager like Zotero or EndNote).
 \addbibresource{ref/ref.bib}
@@ -142,7 +141,8 @@
 
 %%%%% YOUR OWN PERSONAL MACROS
 % This is a good place to dump your own LaTeX macros as they come up.
-\newcommand{\er}[1]{Equation~\eqref{eq:#1}}
+\newcommand{\er}[1]{Eq.~\eqref{eq:#1}}
+\newcommand{\erp}[1]{Eqns.~\eqref{#1}}
 \newcommand{\be}[1]{\textsubscript{#1}}  % easier textsubscripts
 \newcommand{\ab}[1]{\textsubscript{#1}}  % easier textsubscripts
 \renewcommand{\th}{\textsuperscript{th}} % ex: I won 4\th place
@@ -164,7 +164,8 @@ $font$
 
 %%%%% CHOOSE YOUR LINE SPACING HERE
 % This is the official option.  Use it for your submission copy and library copy:
-\setlength{\textbaselineskip}{16pt plus2pt}
+% \setlength{\textbaselineskip}{16pt plus2pt}
+\setlength{\textbaselineskip}{16pt}
 % This is closer spacing (about 1.5-spaced) that you might prefer for your personal copies:
 %\setlength{\textbaselineskip}{18pt plus2pt minus1pt}
 
@@ -173,12 +174,6 @@ $font$
 
 % Leave this line alone; it gets things started for the real document.
 \setlength{\baselineskip}{\textbaselineskip}
-
-%%%%% Equation spacing
-\setlength{\abovedisplayskip}{0pt plus 2pt minus 1pt}
-\setlength{\abovedisplayshortskip}{0pt plus 2pt minus 1pt}
-\setlength{\belowdisplayskip}{14pt plus 2pt minus 1pt}
-\setlength{\belowdisplayshortskip}{14pt plus 2pt minus 1pt}
 
 %%%%% CHOOSE YOUR SECTION NUMBERING DEPTH HERE
 % You have two choices.  First, how far down are sections numbered?  (Below that, they're named but
@@ -314,8 +309,6 @@ $endif$
 \flushbottom
 
 $body$
-% \include{text/ch1-intro}
-% \include{text/ch2-litreview}
 
 
 %% APPENDICES %% 
@@ -334,7 +327,7 @@ $body$
 %   \qauthor{--- Sir Isaiah Berlin \cite{berlin_hedgehog_2013}}
 % \end{savequote}
 
-\setlength{\baselineskip}{0pt} % JEM: Single-space References
+%\setlength{\baselineskip}{0pt} % JEM: Single-space References
 
 % {\renewcommand*\MakeUppercase[1]{#1}%
 \printbibliography %[heading=bibintoc,title={\bibtitle}]
