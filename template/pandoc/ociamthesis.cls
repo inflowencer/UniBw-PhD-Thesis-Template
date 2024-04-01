@@ -233,53 +233,53 @@ separate-uncertainty = true,
 
 %define title page layout
 
-\renewcommand{\maketitle}{%
-\begin{alwayssingle}\null
-    \renewcommand{\footnotesize}{\small}
-    \renewcommand{\footnoterule}{\relax}
-    \thispagestyle{empty}
-\ifmasterssubmission
-  \begin{center}
-  \vspace*{-3ex}
-    { \LARGE {\bfseries {\@title}} \par}
-{\large \vspace*{25mm} {\crest \par} \vspace*{20mm}}
-    {{\Large Candidate no.\ \@candidateno} \par}
-{\large \vspace*{1ex}
-    {Word count: {\@wordcount} \par}
-\vspace*{4ex}
-    {{\submittedtext} \par}
-\vspace*{1ex}
-    {\it {\@degree} \par}
-\vspace*{6ex}
-	{{\originalitytext} \par}
-\vspace*{2ex}
-    {\@degreedate}}
-  \end{center}
-\else
-\topskip0pt
-\vspace*{\fill}
-\begin{adjustwidth*}{}{5mm}% leave left margin alone, decrease right margin by 1in
-  \begin{center}
-    { \LARGE {\bfseries {\@title}} \par}
-{\large \vspace*{30mm} {\crest \par} \vspace*{25mm}}
-    {{\Large \@author} \par}
-{\large \vspace*{1ex}
-    {{\@college} \par}
+% \renewcommand{\maketitle}{%
+% \begin{alwayssingle}\null
+%     \renewcommand{\footnotesize}{\small}
+%     \renewcommand{\footnoterule}{\relax}
+%     \thispagestyle{empty}
+% \ifmasterssubmission
+%   \begin{center}
+%   \vspace*{-3ex}
+%     { \LARGE {\bfseries {\@title}} \par}
+% {\large \vspace*{25mm} {\crest \par} \vspace*{20mm}}
+%     {{\Large Candidate no.\ \@candidateno} \par}
+% {\large \vspace*{1ex}
+%     {Word count: {\@wordcount} \par}
+% \vspace*{4ex}
+%     {{\submittedtext} \par}
 % \vspace*{1ex}
-%     {Universität der Bundeswehr München \par}
-\vspace*{20mm}
-    {{\submittedtext} \par}
-\vspace*{1ex}
-    {\it {\@degree} \par}
-\vspace*{2ex}
-    {\@degreedate}}
-  \end{center}
-\end{adjustwidth*}
-\vspace*{\fill}
-\fi
-  \vfill\null
-\end{alwayssingle}
-}
+%     {\it {\@degree} \par}
+% \vspace*{6ex}
+% 	{{\originalitytext} \par}
+% \vspace*{2ex}
+%     {\@degreedate}}
+%   \end{center}
+% \else
+% \topskip0pt
+% \vspace*{\fill}
+% \begin{adjustwidth*}{}{5mm}% leave left margin alone, decrease right margin by 1in
+%   \begin{center}
+%     { \LARGE {\bfseries {\@title}} \par}
+% {\large \vspace*{30mm} {\crest \par} \vspace*{25mm}}
+%     {{\Large \@author} \par}
+% {\large \vspace*{1ex}
+%     {{\@college} \par}
+% % \vspace*{1ex}
+% %     {Universität der Bundeswehr München \par}
+% \vspace*{20mm}
+%     {{\submittedtext} \par}
+% \vspace*{1ex}
+%     {\it {\@degree} \par}
+% \vspace*{2ex}
+%     {\@degreedate}}
+%   \end{center}
+% \end{adjustwidth*}
+% \vspace*{\fill}
+% \fi
+%   \vfill\null
+% \end{alwayssingle}
+% }
 
 
 
@@ -328,32 +328,32 @@ separate-uncertainty = true,
 %The abstractseparate environment is for running of a page with the abstract
 %on including title and author etc as required to be handed in separately
 
-\newenvironment{abstractseparate} {\newgeometry{margin=3.3cm}\thispagestyle{empty}\begin{alwayssingle}
- \begin{center}
-    {\Large \bfseries \@title \par}
-\ifmasterssubmission
-    {{\large \vspace*{3ex} Candidate no.\ \@candidateno} \par}
-\else
-    {{\large \vspace*{2ex} \@author} \par}
-\fi
-{\large \vspace*{1ex}
-\ifmasterssubmission
-    {Thesis word count: {\@wordcount} \par}
-\else
-    {{\@college} \par}
-    {Universität der Bundeswehr München \par}
-\fi
-\vspace*{1ex}
-    {{\it \submittedtext} \par}
-    {\it {\@degree} \par}
-\vspace*{2ex}
-    {\@degreedate} \par}
-\vfill
-  {\Large \bfseries  Abstract}
-  \end{center}
-\vspace{1ex}
-   \setlength{\baselineskip}{\z@}}
-{\vfill\end{alwayssingle}\restoregeometry}
+% \newenvironment{abstractseparate} {\newgeometry{margin=3.3cm}\thispagestyle{empty}\begin{alwayssingle}
+%  \begin{center}
+%     {\Large \bfseries \@title \par}
+% \ifmasterssubmission
+%     {{\large \vspace*{3ex} Candidate no.\ \@candidateno} \par}
+% \else
+%     {{\large \vspace*{2ex} \@author} \par}
+% \fi
+% {\large \vspace*{1ex}
+% \ifmasterssubmission
+%     {Thesis word count: {\@wordcount} \par}
+% \else
+%     {{\@college} \par}
+%     {Universität der Bundeswehr München \par}
+% \fi
+% \vspace*{1ex}
+%     {{\it \submittedtext} \par}
+%     {\it {\@degree} \par}
+% \vspace*{2ex}
+%     {\@degreedate} \par}
+% \vfill
+%   {\Large \bfseries  Abstract}
+%   \end{center}
+% \vspace{1ex}
+%    \setlength{\baselineskip}{\z@}}
+% {\vfill\end{alwayssingle}\restoregeometry}
 
 
 %ROMANPAGES
@@ -365,8 +365,10 @@ separate-uncertainty = true,
 % Edited by JEM
 
 \newenvironment{romanpages}
-{\cleardoublepage\setlength{\baselineskip}{\frontmatterbaselineskip}\setcounter{page}{1}\renewcommand{\thepage}{\roman{page}}}
-{\cleardoublepage\setcounter{page}{1}\renewcommand{\thepage}{\arabic{page}}}
+{\setlength{\baselineskip}{\frontmatterbaselineskip}\setcounter{page}{1}\renewcommand{\thepage}{\roman{page}}}
+{\setcounter{page}{1}\renewcommand{\thepage}{\arabic{page}}}
+% {\cleardoublepage\setlength{\baselineskip}{\frontmatterbaselineskip}\setcounter{page}{1}\renewcommand{\thepage}{\roman{page}}}
+% {\cleardoublepage\setcounter{page}{1}\renewcommand{\thepage}{\arabic{page}}}
 
 
 %Figure placement on page

@@ -93,10 +93,10 @@
 % Equation spacing
 \expandafter\def\expandafter\normalsize\expandafter{%
     \normalsize%
-    \setlength\abovedisplayskip{0pt}%
-    \setlength\belowdisplayskip{14pt}%
-    \setlength\abovedisplayshortskip{-4pt}%
-    \setlength\belowdisplayshortskip{0pt}%
+    \setlength\abovedisplayskip{12pt plus 4pt minus 6pt}%
+    \setlength\belowdisplayskip{12pt plus 4pt minus 8pt}%
+    % \setlength\abovedisplayshortskip{0pt}%
+    % \setlength\belowdisplayshortskip{0pt}%
 }
 
 % Change this to the name of your .bib file (usually exported from a citation manager like Zotero or EndNote).
@@ -121,6 +121,8 @@
 
 %%%%% THESIS / TITLE PAGE INFORMATION
 % Everybody needs to complete the following:
+$if(titlepage)$
+$else$
 \title{$title$}
 \author{$author$}
 \college{$institute$}
@@ -137,6 +139,7 @@
 \degree{$degree$}
 % Term and year of submission, or date if your board requires (eg most masters)
 \degreedate{$year$}
+$endif$
 
 
 %%%%% YOUR OWN PERSONAL MACROS
@@ -186,24 +189,19 @@ $font$
 % The level that shows up in the ToC:
 \setcounter{tocdepth}{2}
 
-
-%%%%% ABSTRACT SEPARATE
-% This is used to create the separate, one-page abstract that you are required to hand into the Exam
-% Schools.  You can comment it out to generate a PDF for printing or whatnot.
-$if(abstract)$
-\begin{abstractseparate}
-	$abstract$
-\end{abstractseparate}
-$endif$
-
-
 % JEM: Pages are roman numbered from here, though page numbers are invisible until ToC.  This is in
 % keeping with most typesetting conventions.
-\begin{romanpages}
 
 % Title page is created here
+$if(titlepage)$
+\begin{titlepage}
+\includepdf{$titlepage$}
+\end{titlepage}
+$else$
 \maketitle
+$endif$
 
+\begin{romanpages}
 %%%%% DEDICATION -- If you'd like one, un-comment the following.
 %\begin{dedication}
 %This thesis is dedicated to\\
