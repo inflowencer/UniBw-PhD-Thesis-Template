@@ -168,7 +168,11 @@ $font$
 %%%%% CHOOSE YOUR LINE SPACING HERE
 % This is the official option.  Use it for your submission copy and library copy:
 % \setlength{\textbaselineskip}{16pt plus2pt}
-\setlength{\textbaselineskip}{16pt}
+$if(linespacing)$
+\setlength{\textbaselineskip}{$linespacing$}
+$else$
+\setlength{\textbaselineskip}{18pt plus1pt minus1pt}
+$endif$
 % This is closer spacing (about 1.5-spaced) that you might prefer for your personal copies:
 %\setlength{\textbaselineskip}{18pt plus2pt minus1pt}
 
