@@ -16,7 +16,7 @@
 %-------------------------- initial code -----------------------
 
 % JEM: Defaults to one-side, but passing 'twoside' should set everything up for that
-\LoadClass[openany,12pt]{report}
+\LoadClass[openright,12pt]{report}
 
 \newif\ifmc@nobind
 \mc@nobindfalse
