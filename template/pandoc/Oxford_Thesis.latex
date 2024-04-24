@@ -112,7 +112,8 @@
 % \renewcommand*{\bibfont}{\small}
 % \renewcommand*{\bibfont}{\raggedright\small}
 
-
+% Pages shouldn't have numbering here
+\pagenumbering{gobble} 
 
 % Uncomment this if you want equation numbers per section (2.3.12), instead of per chapter (2.18):
 %\numberwithin{equation}{subsection}
@@ -205,7 +206,6 @@ $else$
 \maketitle
 $endif$
 
-\begin{romanpages}
 %%%%% DEDICATION -- If you'd like one, un-comment the following.
 %\begin{dedication}
 %This thesis is dedicated to\\
@@ -250,6 +250,8 @@ $endif$
 % This aligns the bottom of the text of each page.  It generally makes things look better.
 \flushbottom
 
+\pagenumbering{roman}
+
 % This is where the whole-document ToC appears:
 \tableofcontents
 
@@ -288,23 +290,12 @@ $endif$
 
 
 \listoffigures
-
 \mtcaddchapter
 % \mtcaddchapter is needed when adding a non-chapter (but chapter-like) entity to avoid confusing minitoc
 
 % Uncomment to generate a list of tables:
 %\listoftables
 %	\mtcaddchapter
-
-%%%%% LIST OF ABBREVIATIONS
-% This example includes a list of abbreviations.  Look at text/abbreviations.tex to see how that file is
-% formatted.  The template can handle any kind of list though, so this might be a good place for a
-% glossary, etc.
-% \include{text/abbreviations}
-
-% The Roman pages, like the Roman Empire, must come to its inevitable close.
-\end{romanpages}
-
 
 %%%%% CHAPTERS
 % Add or remove any chapters you'd like here, by file name (excluding '.tex'):
