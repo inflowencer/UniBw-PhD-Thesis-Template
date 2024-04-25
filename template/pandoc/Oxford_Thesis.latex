@@ -83,12 +83,29 @@
 	% autocite=superscript
 ]{biblatex}
 
-% Bold authors
+% Bold authors in bibliography
 \DeclareNameWrapperFormat{sortname}{\mkbibbold{#1}}
 \DeclareNameWrapperAlias{author}{sortname}
 \DeclareNameWrapperAlias{editor}{sortname}
 \DeclareNameWrapperAlias{translator}{sortname}
 % \renewcommand\citepunct{, } 
+
+% Hyperref setup
+\usepackage[
+    pdfpagelabels,
+	$if(hyperref-setup)$
+	$hyperref-setup$
+	$else$
+    colorlinks=true,
+    citecolor=blue,
+    urlcolor=blue,
+    linkcolor=black
+	$endif$
+]{hyperref} 
+% \renewcommand\thefootnote{\textcolor{blue}{\arabic{footnote}}}
+
+\usepackage{bookmark}
+	% for linking between references, figures, TOC, etc in the pdf document
 
 % Equation spacing
 \expandafter\def\expandafter\normalsize\expandafter{%
@@ -218,6 +235,8 @@ $endif$
  	$acknowledgements$
 \end{acknowledgements}
 
+\newpage \ \newpage
+
 
 %%%%% ABSTRACT -- Nothing to do here except comment out if you don't want it.
 $if(abstract-german)$
@@ -225,17 +244,19 @@ $if(abstract-german)$
 \begin{abstract}
 	$abstract-german$
 \end{abstract}
-\pagebreak
+\newpage \ \newpage
 \renewcommand{\abstractname}{Abstract}
 \begin{abstract}
     $abstract$
 \end{abstract}
+\newpage \ \newpage
 $else$
 \begin{abstract}
 	$if(abstract)$
 	$abstract$
 	$endif$
 \end{abstract}
+\newpage \ \newpage
 $endif$
 
 

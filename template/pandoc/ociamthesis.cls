@@ -194,17 +194,6 @@ separate-uncertainty = true,
 	% To format the bibliography	
 
 
-\usepackage[
-    pdfpagelabels,
-    colorlinks=true,
-    citecolor=blue,
-    urlcolor=blue,
-    linkcolor=black
-]{hyperref} 
-\renewcommand\thefootnote{\textcolor{blue}{\arabic{footnote}}}
-
-\usepackage{bookmark}
-	% for linking between references, figures, TOC, etc in the pdf document
 
 \usepackage[nohints,tight]{minitoc} 
 	\setcounter{minitocdepth}{2} 
