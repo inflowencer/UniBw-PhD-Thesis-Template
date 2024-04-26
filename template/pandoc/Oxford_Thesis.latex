@@ -101,6 +101,7 @@
     urlcolor=blue,
     linkcolor=black
 	$endif$
+	pdfversion=1.4
 ]{hyperref} 
 % \renewcommand\thefootnote{\textcolor{blue}{\arabic{footnote}}}
 
@@ -179,6 +180,8 @@ $if(author-includes)$
 $endif$
 
 $font$
+
+\usepackage{pdf14}  % For RZ printing, requires PDF-X 1.4
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
