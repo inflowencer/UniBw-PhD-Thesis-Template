@@ -90,7 +90,6 @@
 \DeclareNameWrapperAlias{translator}{sortname}
 % \renewcommand\citepunct{, } 
 
-% Hyperref setup
 \usepackage[
     pdfpagelabels,
 	$if(hyperref-setup)$
@@ -101,9 +100,7 @@
     urlcolor=blue,
     linkcolor=black
 	$endif$
-	pdfversion=1.4
 ]{hyperref} 
-% \renewcommand\thefootnote{\textcolor{blue}{\arabic{footnote}}}
 
 \usepackage{bookmark}
 	% for linking between references, figures, TOC, etc in the pdf document
@@ -181,7 +178,7 @@ $endif$
 
 $font$
 
-\usepackage{pdf14}  % For RZ printing, requires PDF-X 1.4
+% \usepackage{pdf14}  % For RZ printing, requires PDF-X 1.4
 
 %%%%% THE ACTUAL DOCUMENT STARTS HERE
 \begin{document}
