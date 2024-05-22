@@ -222,53 +222,53 @@ separate-uncertainty = true,
 
 %define title page layout
 
-% \renewcommand{\maketitle}{%
-% \begin{alwayssingle}\null
-%     \renewcommand{\footnotesize}{\small}
-%     \renewcommand{\footnoterule}{\relax}
-%     \thispagestyle{empty}
-% \ifmasterssubmission
-%   \begin{center}
-%   \vspace*{-3ex}
-%     { \LARGE {\bfseries {\@title}} \par}
-% {\large \vspace*{25mm} {\crest \par} \vspace*{20mm}}
-%     {{\Large Candidate no.\ \@candidateno} \par}
-% {\large \vspace*{1ex}
-%     {Word count: {\@wordcount} \par}
-% \vspace*{4ex}
-%     {{\submittedtext} \par}
-% \vspace*{1ex}
-%     {\it {\@degree} \par}
-% \vspace*{6ex}
-% 	{{\originalitytext} \par}
-% \vspace*{2ex}
-%     {\@degreedate}}
-%   \end{center}
-% \else
-% \topskip0pt
-% \vspace*{\fill}
-% \begin{adjustwidth*}{}{5mm}% leave left margin alone, decrease right margin by 1in
-%   \begin{center}
-%     { \LARGE {\bfseries {\@title}} \par}
-% {\large \vspace*{30mm} {\crest \par} \vspace*{25mm}}
-%     {{\Large \@author} \par}
-% {\large \vspace*{1ex}
-%     {{\@college} \par}
-% % \vspace*{1ex}
-% %     {Universität der Bundeswehr München \par}
-% \vspace*{20mm}
-%     {{\submittedtext} \par}
-% \vspace*{1ex}
-%     {\it {\@degree} \par}
-% \vspace*{2ex}
-%     {\@degreedate}}
-%   \end{center}
-% \end{adjustwidth*}
-% \vspace*{\fill}
-% \fi
-%   \vfill\null
-% \end{alwayssingle}
-% }
+ \renewcommand{\maketitle}{%
+ \begin{alwayssingle}\null
+     \renewcommand{\footnotesize}{\small}
+     \renewcommand{\footnoterule}{\relax}
+     \thispagestyle{empty}
+ \ifmasterssubmission
+   \begin{center}
+   \vspace*{-3ex}
+     { \LARGE {\bfseries {\@title}} \par}
+ {\large \vspace*{25mm} {\crest \par} \vspace*{20mm}}
+     {{\Large Candidate no.\ \@candidateno} \par}
+ {\large \vspace*{1ex}
+     {Word count: {\@wordcount} \par}
+ \vspace*{4ex}
+     {{\submittedtext} \par}
+ \vspace*{1ex}
+     {\it {\@degree} \par}
+ \vspace*{6ex}
+ 	{{\originalitytext} \par}
+ \vspace*{2ex}
+     {\@degreedate}}
+   \end{center}
+ \else
+ \topskip0pt
+ \vspace*{\fill}
+ \begin{adjustwidth*}{}{5mm}% leave left margin alone, decrease right margin by 1in
+   \begin{center}
+     { \LARGE {\bfseries {\@title}} \par}
+ {\large \vspace*{30mm} {\crest \par} \vspace*{25mm}}
+     {{\Large \@author} \par}
+ {\large \vspace*{1ex}
+     {{\@college} \par}
+ % \vspace*{1ex}
+ %     {Universität der Bundeswehr München \par}
+ \vspace*{20mm}
+     {{\submittedtext} \par}
+ \vspace*{1ex}
+     {\it {\@degree} \par}
+ \vspace*{2ex}
+     {\@degreedate}}
+   \end{center}
+ \end{adjustwidth*}
+ \vspace*{\fill}
+ \fi
+   \vfill\null
+ \end{alwayssingle}
+ }
 
 
 
