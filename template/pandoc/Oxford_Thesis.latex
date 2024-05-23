@@ -161,7 +161,7 @@ $endif$
 %%%%% YOUR OWN PERSONAL MACROS
 % This is a good place to dump your own LaTeX macros as they come up.
 \newcommand{\er}[1]{Eq.~\eqref{eq:#1}}
-\newcommand{\erp}[1]{Eqns.~\eqref{#1}}
+\newcommand{\erp}[2]{Eqns.~\eqref{eq:#1}\eqref{eq:#2}}
 \newcommand{\be}[1]{\textsubscript{#1}}  % easier textsubscripts
 \newcommand{\ab}[1]{\textsubscript{#1}}  % easier textsubscripts
 \renewcommand{\th}{\textsuperscript{th}} % ex: I won 4\th place
