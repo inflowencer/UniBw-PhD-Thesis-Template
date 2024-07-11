@@ -53,7 +53,8 @@
 \usepackage{bold-extra}
 \usepackage{abstract}
 
-\captionsetup{format=hang}
+\DeclareCaptionLabelSeparator{none}{\quad}
+\captionsetup{format=hang, labelsep=none}
 \newcolumntype{C}{>{\centering\arraybackslash}X}
 \newcolumntype{L}{>{\raggedright\arraybackslash}X}
 \newcolumntype{R}{>{\raggedleft\arraybackslash}X}

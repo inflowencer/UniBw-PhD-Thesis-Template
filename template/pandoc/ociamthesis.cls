@@ -60,7 +60,7 @@
 detect-mode,
 detect-weight=true,
 detect-family=true,
-range-phrase={\text{--}},
+range-phrase={\;\text{--}\;},
 exponent-product={\times},
 range-units=single,
 detect-all=true,
