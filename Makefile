@@ -9,7 +9,7 @@ export META_FILE   ?= .meta.yml
 
 # Compilation options
 export PANDOC_COMMON_OPTS = ${PANDOC_OPTIONS} --verbose -F pandoc-include -F pandoc-crossref --citeproc --bibliography ref/ref.bib --metadata-file ${META_FILE}
-export PANDOC_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine ${PDFENGINE} --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter
+export PANDOC_LATEX_OPTS  = ${PANDOC_COMMON_OPTS} --biblatex --pdf-engine ${PDFENGINE} --template Oxford_Thesis.latex --number-sections -M link-citations=true -M documentclass=ociamthesis --top-level-division=chapter --listings
 
 dirs:
 > mkdir -p ${BUILD_DIR} ${EXPORT_DIR}
