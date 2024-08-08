@@ -313,13 +313,15 @@ $if(los)$
 \mtcaddchapter[List of Symbols]
 % \addcontentsline{toc}{chapter}{List of Symbols}
 
+
 \begin{center}
-\begin{tabular}{cll}
-	\textbf{Symbol} & \textbf{Description} & \textbf{Unit}  \\
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{cll}
+	{\large \textbf{Symbol}} & {\large \textbf{Description}} & {\large \textbf{Unit}}  \\
 	$for(los)$ 
 	$los.sym$ & $los.descr$ & \si{$los.unit$}  \\
 	$endfor$
-\end{tabular}
+\end{longtable}
 \end{center}
 $endif$
 
@@ -331,12 +333,13 @@ $if(loa)$
 % \addcontentsline{toc}{chapter}{List of Abbreviations}
 
 \begin{center}
-\begin{tabular}{ll}
-	\textbf{Abbr.} & \textbf{Description} \\
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{ll}
+	{\large \textbf{Abbr.}} & {\large \textbf{Description}} \\
 	$for(loa)$ 
 	$loa.short$ & $loa.long$ \\
 	$endfor$
-\end{tabular}
+\end{longtable}
 \end{center}
 $endif$
 
