@@ -53,6 +53,8 @@
 \usepackage{bold-extra}
 \usepackage{abstract}
 \usepackage{listings}
+\usepackage{mathtools}
+
 
 \DeclareCaptionLabelSeparator{none}{\quad}
 \captionsetup{format=hang, labelsep=none}
@@ -174,6 +176,7 @@ $endif$
 \newcommand{\partialdifof}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\bt}[1]{\texttt{\textbf{#1}}}
 \newcommand{\passthrough}[1]{#1}  % required from pandoc to provide inline
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
 
 $if(author-includes)$
 \input{$author-includes$}
