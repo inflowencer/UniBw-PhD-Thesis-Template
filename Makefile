@@ -33,11 +33,9 @@ latexmk:
 > latexmk -pdf -pdflatex=${PDFENGINE} -cd ${BUILD_DIR}/main.tex
 
 scale:
-> gs -sDEVICE=pdfwrite -dNumRenderingThreads=4 -dPDFX=true -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_pdfx.pdf ${BUILD_DIR}/main.pdf 
-> gs -sDEVICE=pdfwrite -dNumRenderingThreads=4 -dPDFSETTINGS=/prepress -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_600dpi.pdf ${BUILD_DIR}/main.pdf 
-> gs -sDEVICE=pdfwrite -dNumRenderingThreads=4 -dPDFSETTINGS=/printer -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/body.pdf ${BUILD_DIR}/main.pdf
-# > gs -sDEVICE=pdfwrite -dPDFSETTINGS=/screen -dNOPAUSE -dBATCH -sOutputFile=${EXPORT_DIR}/draft.pdf ${EXPORT_DIR}/body.pdf
-# > rm -f build/body.pdf
+# > gs -sDEVICE=pdfwrite -dNumRenderingThreads=4 -dPDFX=true -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_pdfx.pdf ${BUILD_DIR}/main.pdf 
+> gs -sDEVICE=pdfwrite -dNumRenderingThreads=8 -dPDFSETTINGS=/prepress -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_600dpi.pdf ${BUILD_DIR}/main.pdf 
+> gs -sDEVICE=pdfwrite -dNumRenderingThreads=8 -dPDFSETTINGS=/printer -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_300dpi.pdf ${BUILD_DIR}/main.pdf
 
 # post:
 # > mv $BUILD_DIR/main.tex $BUILD_DIRmain.pdf ${BUILD_DIR}/.
