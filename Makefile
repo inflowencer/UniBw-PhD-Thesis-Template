@@ -36,6 +36,7 @@ scale:
 > gs -sDEVICE=pdfwrite -dNumRenderingThreads=8 -dPDFSETTINGS=/prepress -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_600dpi.pdf ${BUILD_DIR}/main.pdf 
 > gs -sDEVICE=pdfwrite -dNumRenderingThreads=8 -dPDFSETTINGS=/printer -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_300dpi.pdf ${BUILD_DIR}/main.pdf
 > gs -sDEVICE=pdfwrite -dNumRenderingThreads=8 -dPDFSETTINGS=/prepress -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -dNOOUTERSAVE -sProcessColorModel=DeviceRGB -dPDFACompatibilityPolicy=1 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_600dpi_PDFA.pdf ${EXPORT_DIR}/PhD_Thesis_600dpi.pdf 
+> gs -dDetectDuplicateImages=true -dDownsampleColorImages=true -dDownsampleGrayImages=true -dDownsampleMonoImages=true -dColorImageResolution=150 -dGrayImageResolution=150 -dMonoImageResolution=150 -sDEVICE=pdfwrite -dNumRenderingThreads=8 -dPDFSETTINGS=/prepress -dNOPAUSE -dBATCH -dBufferSpace=2000000000 -dNOOUTERSAVE -sProcessColorModel=DeviceRGB -dPDFACompatibilityPolicy=1 -sOutputFile=${EXPORT_DIR}/PhD_Thesis_150dpi.pdf ${EXPORT_DIR}/PhD_Thesis_600dpi.pdf 
 
 # post:
 # > mv $BUILD_DIR/main.tex $BUILD_DIRmain.pdf ${BUILD_DIR}/.

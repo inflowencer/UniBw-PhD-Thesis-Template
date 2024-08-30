@@ -112,8 +112,8 @@
 % Equation spacing
 \expandafter\def\expandafter\normalsize\expandafter{%
     \normalsize%
-    \setlength\abovedisplayskip{12pt plus 4pt minus 6pt}%
-    \setlength\belowdisplayskip{12pt plus 4pt minus 8pt}%
+    \setlength\abovedisplayskip{16pt plus 4pt minus 6pt}%
+    \setlength\belowdisplayskip{16pt plus 4pt minus 8pt}%
     % \setlength\abovedisplayshortskip{0pt}%
     % \setlength\belowdisplayshortskip{0pt}%
 }
