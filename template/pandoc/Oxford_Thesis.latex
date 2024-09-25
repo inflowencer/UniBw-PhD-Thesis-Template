@@ -137,7 +137,17 @@
 % Uncomment this if you want equation numbers per section (2.3.12), instead of per chapter (2.18):
 %\numberwithin{equation}{subsection}
 
+\definecolor{backcolour}{rgb}{0.98,0.98,0.95}
 
+\newcommand{\listingsttfamily}{\fontfamily{courier}\footnotesize}
+
+\lstdefinestyle{prettycode}{
+  basicstyle=\listingsttfamily,
+  backgroundcolor=\color{backcolour},
+  aboveskip={0.9\baselineskip},               
+  keepspaces=true,
+}
+\lstset{style=prettycode}
 
 %%%%% THESIS / TITLE PAGE INFORMATION
 % Everybody needs to complete the following:
